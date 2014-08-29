@@ -1,7 +1,7 @@
 Antomaton
 =========
 
-An implementation of (Langton's Ant)[http://en.wikipedia.org/wiki/Langton's_ant] in JavaScript.
+An implementation of [Langton's Ant](http://en.wikipedia.org/wiki/Langton's_ant) in JavaScript.
 
 From Wikipedia:
   Langton's ant is a two-dimensional Turing machine with a very simple set of
