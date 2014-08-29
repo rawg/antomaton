@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Langton's Ant</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<style type="text/css">
+		canvas#langton {
+			border: 1px solid #999;
+		}
+		body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		  }
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="hero-unit">
+				<h1>Antomaton</h1>
+				<p>A JavaScript implementation of <a href="http://en.wikipedia.org/wiki/Langton's_ant">Langton's Ant</a>.</p>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span8">
+					<canvas id="langton" width="750" height="600"></canvas>
+				</div>
+				<div class="span4">
+					<h3>Ant Parameters</h3>
+					<form class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="pattern"><i class="icon-qrcode"></i> Pattern</label>
+							<div class="controls"><input type="text" id="pattern" value="RL" class="input-medium" /></div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="colors"><i class="icon-tint"></i> Colors</label>
+							<div class="controls"><input type="text" class="input-medium" id="colors" value="#fff, #000" /></div>
+							<p class="muted">There should be as many colors as there are steps in the sequence</p>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="tick"><i class="icon-time"></i> Tick Duration</label>
+							<div class="controls">
+								<span class="input-append">
+									<input type="text" id="tick" value="100" class="input-mini" />
+									<span class="add-on">ms</span>
+								</span>
+							</div>
+						</div>
+						<div align="center">
+							<button id="slower" type="button" class="btn"><i class="icon-backward"></i></button>
+							<button id="start" type="button" class="btn"><i class="icon-play"></i></button>
+							<button id="stop" type="button" class="btn"><i class="icon-stop"></i></button>
+							<button id="faster" type="button" class="btn"><i class="icon-forward"></i></button>
+						</div>
+					</form>
+
+					<div>
+						<h3>Status</h3>
+						<ul class="unstyled">
+							<li><i class="icon-map-marker"></i> Location: <span id="loc"></span></li>
+							<li><i class="icon-repeat"></i> Iteration: <span id="iter"></span></li>
+							<li><i class="icon-road"></i> Heading: <span id="heading"></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="ants.js"></script>
+		<script type="text/javascript" src="render.js"></script>
+
+	</body>
+</html>
